@@ -1,6 +1,6 @@
 # Comparison of JavaScript table libraries using Svelte: Handsontable vs. AG Grid vs. DataTables
 
-Starter project for the tutorial comparing Handsontable, AG Grid, and DataTables in a Svelte app. The `completed-app` branch contains the completed code.
+Completed project for the tutorial comparing Handsontable, AG Grid, and DataTables in a Svelte app. The `main` branch contains the starter code.
 
 ## Getting started
 
