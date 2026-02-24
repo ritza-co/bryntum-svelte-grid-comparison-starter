@@ -9,16 +9,18 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.0.0",
-    "svelte": "^4.2.0",
-    "vite": "^5.0.0"
+    "@sveltejs/vite-plugin-svelte": "^4.0.4",
+    "prettier": "^3.8.1",
+    "prettier-plugin-svelte": "^3.5.0",
+    "svelte": "^5.53.3",
+    "vite": "^5.4.21"
   },
   "dependencies": {
     "ag-grid-community": "^35.1.0",
-    "datatables.net-dt": "^2.1.0",
+    "datatables.net-buttons": "^3.2.6",
+    "datatables.net-dt": "^2.3.7",
     "handsontable": "^16.2.0",
-    "jquery": "^3.7.0",
-    "svelte-spa-router": "^4.0.0",
-    "xlsx": "^0.18.5"
+    "jquery": "^3.7.1",
+    "svelte-spa-router": "^4.0.1"
   }
 }

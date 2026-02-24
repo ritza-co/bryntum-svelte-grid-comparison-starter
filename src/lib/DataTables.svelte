@@ -1,42 +1,38 @@
 <script>
-  import "datatables.net-dt/css/jquery.dataTables.min.css";
-  import jQuery from "jquery";
-  import { onDestroy, onMount } from "svelte";
+    import 'datatables.net-dt/css/dataTables.dataTables.min.css';
+    import DataTable from 'datatables.net-dt';
+    import { onDestroy, onMount } from 'svelte';
 
-  let table = null;
+    let tableEl = $state();
+    let table = null;
 
-  onMount(() => {
-    table = jQuery("#datatable").DataTable({
-      paging: false,
-      columns: [
-        { data: "name" },
-        { data: "city" },
-        { data: "team" },
-        { data: "score" },
-        { data: "percentWins" },
-      ],
+    onMount(() => {
+        table = new DataTable(tableEl, {
+            paging: false,
+            columns: [
+                { data: 'name', title: 'Name' },
+                { data: 'city', title: 'City' },
+                { data: 'team', title: 'Team' },
+                { data: 'score', title: 'Score' },
+                { data: 'percentWins', title: 'Percent Wins' }
+            ]
+        });
     });
-    table.init();
-  });
 
-  onDestroy(() => {
-    if (table) {
-      table.destroy();
-    }
-  });
+    onDestroy(() => {
+        if (table) {
+            table.destroy();
+        }
+    });
 </script>
 
-<div>
-  <table id="datatable" class="display">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>City</th>
-        <th>Team</th>
-        <th>Score</th>
-        <th>Percent wins</th>
-      </tr>
-    </thead>
-    <tbody />
-  </table>
+<div class="grid-wrapper">
+    <table bind:this={tableEl} class="display" style="width: 100%"></table>
 </div>
+
+<style>
+    .grid-wrapper {
+        flex: 1;
+        min-width: 0;
+    }
+</style>
